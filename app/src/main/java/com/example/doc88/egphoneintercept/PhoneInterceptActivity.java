@@ -158,10 +158,10 @@ public class PhoneInterceptActivity extends AppCompatActivity {
 //
 //                        }
 //                    }).show();
-                    M_ConfirmDialog.Builder alert = new M_ConfirmDialog.Builder(this);
+                    ConfirmDialog.Builder alert = new ConfirmDialog.Builder(this);
                     alert.setTitle("提示")
-                            .setMessage("确定从文辑中移除该文档吗？")
-                            .setPositiveButton("删除", new DialogInterface.OnClickListener() {
+                            .setMessage("需要开启权限后才能使用")
+                            .setPositiveButton("去设置", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
 
@@ -169,7 +169,7 @@ public class PhoneInterceptActivity extends AppCompatActivity {
                                 }
                             })
                             .setPositiveButtonColor(R.color.colorAccent)
-                            .setNegativeButton("再想想", new DialogInterface.OnClickListener() {
+                            .setNegativeButton("取消", new DialogInterface.OnClickListener() {
                                 @Override
                                 public void onClick(DialogInterface dialog, int which) {
                                     dialog.dismiss();

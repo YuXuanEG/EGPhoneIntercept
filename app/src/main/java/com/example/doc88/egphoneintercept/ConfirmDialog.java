@@ -7,14 +7,14 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
 
-public class M_ConfirmDialog extends Dialog {
+public class ConfirmDialog extends Dialog {
 
-	public M_ConfirmDialog(Context context) {
+	public ConfirmDialog(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
 	}
 
-	public M_ConfirmDialog(Context context, int theme) {
+	public ConfirmDialog(Context context, int theme) {
 		super(context, theme);
 	}
 
@@ -122,11 +122,11 @@ public class M_ConfirmDialog extends Dialog {
 			return this;
 		}
 
-		public M_ConfirmDialog create() {
+		public ConfirmDialog create() {
 			LayoutInflater inflater = (LayoutInflater) context
 					.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
 			// instantiate the dialog with the custom Theme
-			final M_ConfirmDialog dialog = new M_ConfirmDialog(context,
+			final ConfirmDialog dialog = new ConfirmDialog(context,
 					R.style.my_dialog);
 			View layout = inflater.inflate(R.layout.dialog_confirm, null);
 			dialog.setContentView(layout);
