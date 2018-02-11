@@ -20,7 +20,7 @@
             </intent-filter>
         </activity>
         <receiver
-            android:name=".OutcallReceiver"
+            android:name=".CallReceiver"
             android:enabled="true"
             android:exported="true">
             <intent-filter>

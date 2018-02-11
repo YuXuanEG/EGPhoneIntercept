@@ -24,7 +24,7 @@ import java.util.ArrayList;
 public class PhoneInterceptActivity extends AppCompatActivity {
     private EditText et_ipnumber;
     private SharedPreferences sp;
-    private OutcallReceiver outcallReceiver;
+    private CallReceiver callReceiver;
 
     private String permissions[] = {
             Manifest.permission.READ_PHONE_STATE,
@@ -42,11 +42,11 @@ public class PhoneInterceptActivity extends AppCompatActivity {
         sp = getSharedPreferences("config", MODE_PRIVATE);
 
         //动态注册拦截广播
-//        outcallReceiver = new OutcallReceiver();
+//        callReceiver = new CallReceiver();
 //        IntentFilter intentFilter = new IntentFilter();
 //        intentFilter.addAction("android.intent.action.PHONE_STATE");
 //        intentFilter.addAction("android.intent.action.NEW_OUTGOING_CALL");
-//        registerReceiver(outcallReceiver,intentFilter);
+//        registerReceiver(callReceiver,intentFilter);
 
         requestEGPermission(permissions);
     }
@@ -216,8 +216,8 @@ public class PhoneInterceptActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
-//        if (outcallReceiver != null) {
-//            unregisterReceiver(outcallReceiver);
+//        if (callReceiver != null) {
+//            unregisterReceiver(callReceiver);
 //        }
     }
 }
