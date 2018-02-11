@@ -123,6 +123,7 @@ public class PhoneInterceptActivity extends AppCompatActivity {
             }
             String tmpList[] = new String[toApplyList.size()];
             if (!toApplyList.isEmpty()) {
+                //缺少权限
                 requestPermissions(toApplyList.toArray(tmpList), 123);
             }else {
                 //有权限，随意do
@@ -145,19 +146,6 @@ public class PhoneInterceptActivity extends AppCompatActivity {
                     //响应事件
                 }else{
                     //权限被拒绝
-
-
-//                    new SimpleBaseDialog(this, "需要开启权限后才能使用", "去设置", "取消", new SimpleClickListener() {
-//                        @Override
-//                        public void ok() {
-//                            Intent intent=CMethod.getAppDetailSettingIntent(PulishWriteActivity.this);
-//                            startActivity(intent);
-//                        }
-//                        @Override
-//                        public void cancle() {
-//
-//                        }
-//                    }).show();
                     ConfirmDialog.Builder alert = new ConfirmDialog.Builder(this);
                     alert.setTitle("提示")
                             .setMessage("需要开启权限后才能使用")

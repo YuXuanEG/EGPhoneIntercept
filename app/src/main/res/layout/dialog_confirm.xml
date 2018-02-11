@@ -31,35 +31,11 @@
             android:paddingBottom="20dp"
             android:textSize="@dimen/dialog_content_font_size"
             />
-        <LinearLayout
-            android:id="@+id/check_message_area"
-            android:layout_width="match_parent"
-            android:orientation="horizontal"
-            android:layout_gravity="center_vertical"
-            android:layout_height="40dp"
-            android:paddingLeft="14dp"
-            android:visibility="gone">
-            <ImageView
-                android:id="@+id/check_message_box"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="14dp"
-                android:src="@mipmap/icon_check_box_checked"
-                />
-            <TextView
-                android:id="@+id/check_message"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:text="同时关注该任务"
-                android:textSize="@dimen/dialog_content_check_font_size"
-                android:textColor="@color/doc88_gray_99"
-                />
-        </LinearLayout>
+
         <View
             android:layout_width="match_parent"
             android:layout_height="1px"
-            android:background="@color/doc88_gray_cc"/>
+            android:background="@color/colorPrimary"/>
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="@dimen/dialog_btn_height"
@@ -72,14 +48,14 @@
             android:layout_weight="1"
             android:textSize="@dimen/dialog_btn_font_size"
             android:text="想一想"
-            android:textColor="@color/doc88_green"
+            android:textColor="@color/colorPrimaryDark"
             android:gravity="center"
             android:layout_gravity="center"
             />
             <View
             android:layout_width="1px"
             android:layout_height="fill_parent"
-            android:background="@color/doc88_gray_cc"/>
+            android:background="@color/colorPrimary"/>
             <TextView
             android:id="@+id/positiveButton"
             android:layout_width="0dp"
@@ -87,7 +63,7 @@
             android:layout_weight="1"
             android:textSize="@dimen/dialog_btn_font_size"
             android:text="确定"
-            android:textColor="@color/doc88_gray_99"
+            android:textColor="@color/colorAccent"
             android:gravity="center"
             android:layout_gravity="center"
             />
